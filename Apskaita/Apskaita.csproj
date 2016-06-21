@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69B70E8C-BAB7-47C0-89F4-A5A27B7D21E7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Apskaita</RootNamespace>
+    <AssemblyName>Apskaita</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\shared_bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\shared_bin\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Prezenteriai\Ataskaitos\LikuciaiAtaskaitaPrezenteris.cs" />
+    <Compile Include="Prezenteriai\MatoVntPrezenteris.cs" />
+    <Compile Include="Prezenteriai\NurasymoAktaiFormPresenter.cs" />
+    <Compile Include="Prezenteriai\PajamavimoAktaiFormPresenter.cs" />
+    <Compile Include="Prezenteriai\RegistrasPrezenteris.cs" />
+    <Compile Include="Prezenteriai\TiekejaiFormPresenter.cs" />
+    <Compile Include="Prezenteriai\TurtasPrezenteris.cs" />
+    <Compile Include="Vaizdai\MaterialinesVertybes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vaizdai\MaterialinesVertybes.Designer.cs">
+      <DependentUpon>MaterialinesVertybes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vaizdai\MatoVnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vaizdai\MatoVnt.Designer.cs">
+      <DependentUpon>MatoVnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vaizdai\Ataskaita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vaizdai\Ataskaita.Designer.cs">
+      <DependentUpon>Ataskaita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vaizdai\NuoIki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vaizdai\NuoIki.Designer.cs">
+      <DependentUpon>NuoIki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vaizdai\Nurasymas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vaizdai\Nurasymas.Designer.cs">
+      <DependentUpon>Nurasymas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vaizdai\PagrindinisLangas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vaizdai\PagrindinisLangas.Designer.cs">
+      <DependentUpon>PagrindinisLangas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vaizdai\Pajamavimas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vaizdai\Pajamavimas.Designer.cs">
+      <DependentUpon>Pajamavimas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vaizdai\Prisijungimas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vaizdai\Prisijungimas.Designer.cs">
+      <DependentUpon>Prisijungimas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vaizdai\RegistroPerziura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vaizdai\RegistroPerziura.Designer.cs">
+      <DependentUpon>RegistroPerziura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vaizdai\Saskaitos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vaizdai\Saskaitos.Designer.cs">
+      <DependentUpon>Saskaitos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prezenteriai\SaskaitosFormPresenter.cs" />
+    <Compile Include="Vaizdai\Tiekejai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vaizdai\Tiekejai.Designer.cs">
+      <DependentUpon>Tiekejai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Valdikliai\DuomenuSarasas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Raportai\likuciai.rdlc" />
+    <EmbeddedResource Include="Vaizdai\MaterialinesVertybes.resx">
+      <DependentUpon>MaterialinesVertybes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vaizdai\MatoVnt.resx">
+      <DependentUpon>MatoVnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vaizdai\Ataskaita.resx">
+      <DependentUpon>Ataskaita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vaizdai\NuoIki.resx">
+      <DependentUpon>NuoIki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vaizdai\Nurasymas.resx">
+      <DependentUpon>Nurasymas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vaizdai\PagrindinisLangas.resx">
+      <DependentUpon>PagrindinisLangas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vaizdai\Pajamavimas.resx">
+      <DependentUpon>Pajamavimas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vaizdai\Prisijungimas.resx">
+      <DependentUpon>Prisijungimas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vaizdai\RegistroPerziura.resx">
+      <DependentUpon>RegistroPerziura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vaizdai\Saskaitos.resx">
+      <DependentUpon>Saskaitos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Vaizdai\Tiekejai.resx">
+      <DependentUpon>Tiekejai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Valdikliai\DuomenuSarasas.resx">
+      <DependentUpon>DuomenuSarasas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\Apskaita.DataAccessLayer.ApskaitaDataSet.datasource" />
+    <None Include="Properties\DataSources\Apskaita.DataAccessLayer.AtaskaitosDataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Apskaita.BussinesLogicLayer\Apskaita.BussinessLogicLayer.csproj">
+      <Project>{f4d49e62-0596-45ac-9d99-1723285c5293}</Project>
+      <Name>Apskaita.BussinessLogicLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Apskaita.DataAccessLayer\Apskaita.DataAccessLayer.csproj">
+      <Project>{dd962f31-ba2f-4be9-a6a1-22cac13cdac6}</Project>
+      <Name>Apskaita.DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExportData.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
